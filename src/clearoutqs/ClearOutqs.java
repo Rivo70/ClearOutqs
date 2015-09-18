@@ -25,6 +25,7 @@ public class ClearOutqs {
 
     /**
      * @param args the command line arguments
+     * @throws com.ibm.as400.access.AS400SecurityException
      */
     public static void main(String[] args) throws AS400SecurityException {
         
