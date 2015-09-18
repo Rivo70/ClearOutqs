@@ -20,8 +20,8 @@ public class DBConnect {
         public static Statement st;
         public static Connection con;
         public static String host = "10.10.2.38";
-        public static String user = "lawpgm";
-        public static String pwd  = "lawpgm";   
+        public static String user = "";
+        public static String pwd  = "";   
    
         public static Statement Network() {
         
