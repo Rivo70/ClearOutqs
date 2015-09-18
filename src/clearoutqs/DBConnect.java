@@ -11,6 +11,9 @@ package clearoutqs;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import com.ibm.as400.access.AS400;
+import com.ibm.as400.access.CommandCall;
+import java.sql.SQLException;
 
 /**
  *
@@ -20,8 +23,8 @@ public class DBConnect {
         public static Statement st;
         public static Connection con;
         public static String host = "10.10.2.38";
-        public static String user = "lawpgm";
-        public static String pwd  = "lawpgm";   
+        public static String user = "";
+        public static String pwd  = "";   
    
         public static Statement Network() {
         
@@ -30,9 +33,12 @@ public class DBConnect {
                con = DriverManager.getConnection("jdbc:as400://" + host, user, pwd);
                st = con.createStatement();
                     
-           } catch(Exception e){
+           } catch(ClassNotFoundException | SQLException e){
                   System.out.println(e.toString());
            }
         return st;
     }
+        
+     
+        
 }
