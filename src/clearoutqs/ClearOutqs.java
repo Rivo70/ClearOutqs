@@ -4,7 +4,6 @@
  * 
  */
 
-
 package clearoutqs;
 
 import com.ibm.as400.access.AS400;
